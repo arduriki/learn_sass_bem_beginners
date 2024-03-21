@@ -1,0 +1,18 @@
+// nesting
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    // auto: based on the content
+    gap: 40px;
+    
+
+    // & -> taking from the parent
+    &__main {
+
+    }
+
+    &__sidebar {
+
+    }
+}
