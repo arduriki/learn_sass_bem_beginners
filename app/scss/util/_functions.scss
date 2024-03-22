@@ -1,0 +1,21 @@
+@use "sass:math";
+
+// Throw an error if the parameter has a unit
+@function pxToRem($pxValue) {
+    // If $pixel is a number, do the calc
+    @if math.is-unitless($pxValue) {
+        @return math.div($pxValue, 16) + rem;
+    } // else, throw an error message
+    @else {
+        @error "Don't use units when using the pxToRem() function; only numbers.";
+    }
+}
+
+@function pxToEm($pxValue) {
+    @if math.is-unitless($pxValue) {
+        @return math.div($pxValue, 16) + rem;
+    }
+    @else {
+        @error "Don't use units when using the pxToRem() function; only numbers.";
+    }
+}

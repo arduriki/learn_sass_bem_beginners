@@ -1,4 +1,4 @@
-@use '../util' as u;
+@use "../util" as u;
 
 // nesting
 .grid {
@@ -7,10 +7,10 @@
   // two rows
   grid-template-rows: auto auto;
   // auto: based on the content
-  gap: 40px;
+  gap: u.pxToRem(40);
   // set a max-width for readibility on larger screens
   // max-width: 1000px;
-  width: min(100% - 40px, 1000px);
+  width: min(100% - u.pxToRem(40), u.pxToRem(1000));
   // row center the content
   margin-inline: auto;
 
@@ -20,10 +20,10 @@
     // one row set up
     grid-template-rows: auto;
   }
-  
+
   &__main,
   &__sidebar {
-    padding: 40px;
+    padding: u.pxToRem(40);
   }
 
   // & -> taking from the parent
@@ -49,5 +49,8 @@
     @include u.breakpoint-down(small) {
       text-align: right;
     }
+  }
+  &__widget {
+    padding: u.pxToRem(16);
   }
 }

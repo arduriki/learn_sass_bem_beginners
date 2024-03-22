@@ -49,32 +49,40 @@ a:active {
   --text-color: hsl(0, 0%, 100%);
 }
 
+.magenta {
+  background-color: hsl(300, 100%, 30%);
+}
+
+.green {
+  background-color: hsl(120, 100%, 27%);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
-  width: min(100% - 40px, 1000px);
+  gap: 2.5rem;
+  width: min(100% - 2.5rem, 62.5rem);
   margin-inline: auto;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25rem) {
   .grid {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
   }
 }
 .grid__main, .grid__sidebar {
-  padding: 40px;
+  padding: 2.5rem;
 }
 .grid__main {
   background-color: hsl(240, 99%, 33%);
 }
-@media (min-width: 43.75em) {
+@media (min-width: 43.75rem) {
   .grid__main {
     background-color: hsl(120, 100%, 16%);
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25rem) {
   .grid__main {
     background-color: hsl(39, 100%, 35%);
   }
@@ -82,13 +90,16 @@ a:active {
 .grid__sidebar {
   background-color: hsl(300, 100%, 30%);
 }
-@media (max-width: 56.24875em) {
+@media (max-width: 56.24875rem) {
   .grid__sidebar {
     text-align: center;
   }
 }
-@media (max-width: 43.7485em) {
+@media (max-width: 41.87375rem) {
   .grid__sidebar {
     text-align: right;
   }
+}
+.grid__widget {
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
